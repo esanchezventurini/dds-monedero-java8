@@ -9,11 +9,6 @@ public class Extraccion extends Movimiento {
     this.monto = monto;
   }
 	
-	@Override
-	public double calcularValor(Cuenta cuenta) {   
-      return cuenta.getSaldo() - getMonto();
-  }
-	
 	public boolean isDeposito() {
 		return false;
 	}

@@ -18,8 +18,6 @@ public abstract class Movimiento {
   public boolean esDeLaFecha(LocalDate fecha) {
     return this.fecha.equals(fecha);
   }
-
-  public abstract double calcularValor(Cuenta cuenta);
   
   public abstract boolean isDeposito();
 }
