@@ -3,7 +3,6 @@ package dds.monedero.model;
 import java.time.LocalDate;
 
 import dds.monedero.exceptions.MaximoExtraccionDiarioException;
-import dds.monedero.exceptions.MontoNegativoException;
 import dds.monedero.exceptions.SaldoMenorException;
 
 public class Extraccion extends Movimiento {
