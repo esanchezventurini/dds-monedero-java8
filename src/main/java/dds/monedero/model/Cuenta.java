@@ -21,10 +21,6 @@ public class Cuenta {
   public Cuenta(double montoInicial) {
     saldo = montoInicial;
   }
-
-  public void setMovimientos(List<Movimiento> movimientos) {
-    this.movimientos = movimientos;
-  }
   
   private long cantidadDepositosDiarios() {
   	return getMovimientos().stream().filter(movimiento -> movimiento.montoAplicable() > 0).count();
@@ -39,10 +35,6 @@ public class Cuenta {
   	unMovimiento.validarAplicacion(saldo, cantidadDepositosDiarios(), limiteDiario());
   	movimientos.add(unMovimiento);
   	saldo += unMovimiento.montoAplicable();
-  }
-  
-  public void agregarMovimiento(Movimiento movimiento) {
-    movimientos.add(movimiento);
   }
 
   public double getMontoExtraidoA(LocalDate fecha) {
